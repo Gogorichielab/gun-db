@@ -300,7 +300,7 @@ If you find problems or have suggestions:
 If you believe any data or images may not be public information suitable for CC0 1.0 Universal license:
 
 - Email: [admin@gunclear.io](mailto:admin@gunclear.io)
-- Or open a GitHub issue marked as confidential
+- Or create a private security advisory on GitHub
 
 ## License
 
