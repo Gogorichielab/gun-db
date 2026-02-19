@@ -91,6 +91,10 @@ This repository uses automated tools to maintain code quality and dependencies:
 
 ## Contributing
 
-If you see something wrong or missing, please feel free to add them via PR.
-If you feel something is not public information free for common use (according to CC-1.0),
-please add an issue or contact us at [admin@gunclear.io](mailto:admin@gunclear.io).
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) guide for detailed information on:
+- How to add manufacturers, models, and variants
+- Development setup and testing
+- Pull request guidelines
+- Data quality standards
+
+For quick questions or concerns about licensing, contact us at [admin@gunclear.io](mailto:admin@gunclear.io).
