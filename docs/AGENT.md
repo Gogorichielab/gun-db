@@ -68,12 +68,23 @@ Located at the root of each manufacturer directory.
 - **banner** (optional): Full logo with name/slogan or popular model image, 128x512 px
   - If missing, banner is not displayed
 
-**Example**:
+**Example** (simplified format commonly used):
 ```json
 {
     "logo": "https://us.glock.com/.../glock-logo.svg"
 }
 ```
+
+**Example** (full format):
+```json
+{
+    "small": "https://example.com/logo-128.png",
+    "large": "https://example.com/logo-256.png",
+    "banner": "https://example.com/banner-128x512.png"
+}
+```
+
+Note: The actual database currently uses simplified formats (single "logo" or "banner" key). The full three-key structure is the ideal format described in the main README.
 
 ### 2. Variant Files (`{model-number}.json`)
 
@@ -93,7 +104,7 @@ Located in `{manufacturer}/{model}/` directories.
 **Fields**:
 - **barrel length**: Physical barrel measurement
 - **caliber**: Ammunition type/caliber
-- **style**: Firearm category (e.g., "handgun", "long gun", "rifle")
+- **style**: Firearm category (e.g., "handgun", "long gun", "shotgun", "pistol")
 - **fire mode**: Operating mechanism (e.g., "semi-auto", "bolt action", "pump action")
 - **decoder**: Serial number pattern using `*` as wildcard for unique identification
 
@@ -256,23 +267,28 @@ As of this documentation, the database includes:
 ### Common Tasks
 
 **Task**: Add a new firearm variant
-```python
-# 1. Determine the correct path
-# db/{manufacturer}/{model}/{variant}.json
 
-# 2. Create JSON with required fields
-{
-    "barrel length": "...",
-    "caliber": "...",
-    "style": "...",
-    "fire mode": "...",
-    "decoder": "..."
-}
+1. Determine the correct path:
+   ```
+   db/{manufacturer}/{model}/{variant}.json
+   ```
 
-# 3. Test with CLI
-./gun_db.py
-🔫 ~ get_info "{Manufacturer}" {Model} "{Variant}"
-```
+2. Create JSON file with required fields:
+   ```json
+   {
+       "barrel length": "...",
+       "caliber": "...",
+       "style": "...",
+       "fire mode": "...",
+       "decoder": "..."
+   }
+   ```
+
+3. Test with CLI:
+   ```bash
+   ./gun_db.py
+   🔫 ~ get_info "{Manufacturer}" {Model} "{Variant}"
+   ```
 
 **Task**: Update manufacturer logo
 ```bash
