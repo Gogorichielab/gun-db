@@ -69,6 +69,26 @@ The file should be in JSON format, with the following layout:
 }
 ```
 
+## Automation & Maintenance
+
+This repository uses automated tools to maintain code quality and dependencies:
+
+### Dependabot
+- **Python Dependencies**: Automated weekly checks for updates to Python packages
+- **GitHub Actions**: Automated weekly checks for updates to workflow actions
+
+### GitHub Actions Workflows
+- **CI**: Runs on all pull requests and pushes to main
+  - Tests Python compatibility (3.8 - 3.12)
+  - Validates dependency installation
+  - Checks Python syntax
+  - Tests CLI tool functionality
+
+- **Release Notes**: Automatically triggered on merge to main
+  - Generates release notes from merged PRs
+  - Creates a new GitHub release with auto-incrementing version tags
+  - Aggregates all changes since the last release
+
 ## Contributing
 
 If you see something wrong or missing, please feel free to add them via PR.
