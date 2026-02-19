@@ -104,7 +104,7 @@ Located in `{manufacturer}/{model}/` directories.
 **Fields**:
 - **barrel length**: Physical barrel measurement
 - **caliber**: Ammunition type/caliber
-- **style**: Firearm category (e.g., "handgun", "long gun", "shotgun", "pistol")
+- **style**: Firearm category (e.g., "handgun", "long gun", "shotgun")
 - **fire mode**: Operating mechanism (e.g., "semi-auto", "bolt action", "pump action")
 - **decoder**: Serial number pattern using `*` as wildcard for unique identification
 
@@ -291,9 +291,9 @@ As of this documentation, the database includes:
    ```
 
 **Task**: Update manufacturer logo
-```bash
-# Edit db/{manufacturer}/logo.json
-# Ensure URLs are accessible and properly sized
+```
+Edit db/{manufacturer}/logo.json
+Ensure URLs are accessible and properly sized
 ```
 
 ## Support and Questions
