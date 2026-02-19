@@ -46,7 +46,7 @@ jobs:
           echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
           echo "Next version: $NEW_VERSION"
       - name: Create Release
-        uses: ncipollo/release-action@v1.14.0
+        uses: ncipollo/release-action@v1.20.0
         with:
           tag: ${{ steps.next_version.outputs.new_version }}
           name: Release ${{ steps.next_version.outputs.new_version }}
